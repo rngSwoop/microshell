@@ -1,0 +1,9 @@
+#This is a makefile for ush
+#
+#CFLAGS=-g -Wall
+
+ush: ush.c builtin.c expand.c
+        $(CC)$(CFLAGS) -o ush ush.c builtin.c expand.c
+
+clean:
+        rm -f ush ush.o builtin builtin.o expand expand.o
